@@ -4,6 +4,10 @@
       $scope.messageOnUrDiet = "";
 
       $scope.checkDiet = function() {
+        if (!$scope.items) {
+          $scope.messageOnUrDiet = "Please enter data first";
+          return;
+        }
 
 
         var itemArray = $scope.items.split(',');
